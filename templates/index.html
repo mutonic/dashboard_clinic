@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CHUK monitoring Dashboard</title>
+</head>
+<body>
+  <h1>CHUK Monitoring Dashboard</h1>
+  <div>
+    {% for row in admission_counts %}
+    <p>{{ row['TYPE'] }}: {{ row['admission_count'] }}</p>
+    {% endfor %}
+  </div>
+  
+  <div>
+    {% for row in visit_counts %}
+    <p>{{ row['TYPE'] }}: {{ row['visit_count'] }}</p>
+    {% endfor %}
+  </div>
+  
+  
+</body>
+</html>
